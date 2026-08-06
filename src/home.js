@@ -1,10 +1,11 @@
-// IMPORT hero-img
+import heroImg from "./assets/images/herobg.jpg";
 
 // CREATE section#home-hero
   /**
    * div#hero-container
    *   h1 logo/text
    *   img hero-img
+   *   p motto
    */
 // CREATE section#home-info
   /**
@@ -28,5 +29,8 @@
      * p copyright info
      */
 
+function createHomeElements() {
 
-// EXPORT function
+}
+
+export default createHomeElements;
