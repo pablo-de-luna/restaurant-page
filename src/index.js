@@ -3,7 +3,6 @@
 "use strict"
 
 import "./style.css";
+import loadHomePage from "./pages-modules/home.js";
 
-import homepage from "./home.js";
-
-homepage();
+loadHomePage();
