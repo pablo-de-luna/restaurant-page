@@ -13,6 +13,7 @@ import prosciutto from "../assets/images/prosciutto.png";
   House tomato sauce, fresh mozzarella, sweet cherry tomatoes, aromatic basil leaves, and a sprinkle of aged parmesan.
  */
 
-//CREATE Function AddMenuElements
+//CODE Function AddMenuElements
+export default function AddMenuElements() {
 
-//EXPORT Function 
+}
