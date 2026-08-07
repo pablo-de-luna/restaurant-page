@@ -2,6 +2,8 @@ import prosciutto from "../assets/images/prosciutto.png";
 import pepperoni from "../assets/images/pepperoni.png";
 import margherita from "../assets/images/margherita.png";
 
+const content = document.querySelector("#content");
+
 const pizzas = [
   {
     image: prosciutto,
@@ -20,9 +22,20 @@ const pizzas = [
   }
 ];
 
-const content = document.querySelector("#content");
+export default function addMenuElements() {
+  const menuTitle = document.createElement("div");
+  menuTitle.id = "menu-title";
+  menuTitle.textContent = "MENU";
 
-function createAndAppendPizzasContainerElements(menuContainer) {
+  const menuContainer = document.createElement("div");
+  menuContainer.id = "menu-container";
+
+  content.appendChild(menuTitle);
+  createAndAppendPizzaCards(menuContainer);
+  content.appendChild(menuContainer);
+}
+
+function createAndAppendPizzaCards(parentElement) {
   for (let i = 0; i < pizzas.length; i++) {
     const pizzaContainer = document.createElement("div");
     pizzaContainer.className = "pizza-container";
@@ -42,24 +55,10 @@ function createAndAppendPizzasContainerElements(menuContainer) {
 
     pizzaTextContainer.appendChild(pizzaName);
     pizzaTextContainer.appendChild(pizzaDescription);
+
     pizzaContainer.appendChild(pizzaImage);
     pizzaContainer.appendChild(pizzaTextContainer);
 
-    menuContainer.appendChild(pizzaContainer);
+    parentElement.appendChild(pizzaContainer);
   }
 }
-
-function AddMenuElements() {
-  const menuTitle = document.createElement("div");
-  menuTitle.id = "menu-title";
-  menuTitle.textContent = "MENU";
-
-  const menuContainer = document.createElement("div");
-  menuContainer.id = "menu-container";
-
-  content.appendChild(menuTitle);
-  createAndAppendPizzasContainerElements(menuContainer);
-  content.appendChild(menuContainer);
-}
-
-export default AddMenuElements;
