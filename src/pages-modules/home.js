@@ -7,7 +7,7 @@ export default function AddHomeElements() {
   const heroSection = document.createElement("section");  
   heroSection.id = "hero-section";
 
-    const heroLogo = document.createElement("h1"); 
+    const heroLogo = document.createElement("div"); 
     heroLogo.textContent = "PIZZATOP"
     
     const heroMotto = document.createElement("div");
@@ -28,7 +28,7 @@ export default function AddHomeElements() {
     const hours = document.createElement("div");
     hours.id = "home-hours-container";
 
-    const hoursTitle = document.createElement("h2");
+    const hoursTitle = document.createElement("h1");
     hoursTitle.textContent = "HOURS";
 
     const hoursText = document.createElement("p");
@@ -57,7 +57,7 @@ export default function AddHomeElements() {
     const findUsInfo = document.createElement("div");
     findUsInfo.id = "findus-container";
 
-    const findUsTitle = document.createElement("h2");
+    const findUsTitle = document.createElement("h1");
     findUsTitle.textContent = "FIND US";
 
     const findUsText = document.createElement("p");
@@ -71,15 +71,6 @@ export default function AddHomeElements() {
   infoSection.appendChild(goToMenu);
   infoSection.appendChild(findUsInfo);
 
-  //Footer
-  const footer = document.createElement("footer");
-
-  const footerText = document.createElement("div"); 
-  footerText.textContent = "© 2026 PIZZATOP. All rights reserved.";
-
-  footer.appendChild(footerText);
-
   content.appendChild(heroSection);
   content.appendChild(infoSection);
-  content.appendChild(footer);
 }
