@@ -58,8 +58,13 @@ function createAndAppendPizzaCards(parentElement) {
     pizzaTextContainer.appendChild(pizzaName);
     pizzaTextContainer.appendChild(pizzaDescription);
 
-    pizzaContainer.appendChild(pizzaImage);
-    pizzaContainer.appendChild(pizzaTextContainer);
+    if (i % 2) {
+      pizzaContainer.appendChild(pizzaImage);
+      pizzaContainer.appendChild(pizzaTextContainer);
+    } else {
+      pizzaContainer.appendChild(pizzaTextContainer);
+      pizzaContainer.appendChild(pizzaImage);
+    }
 
     parentElement.appendChild(pizzaContainer);
   }

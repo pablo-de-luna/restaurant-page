@@ -10,8 +10,6 @@ import loadAboutPage from "./pages-modules/about.js";
 const content = document.querySelector("#content");
 const navButtons = document.querySelectorAll(".nav-button");
 
-loadHomePage();
-
 function switchPages() {
   navButtons.forEach(button => button.addEventListener("click", () => {
     content.replaceChildren();
@@ -29,4 +27,8 @@ function switchPages() {
     }
   }));
 }
-switchPages();
+
+const initialize = (() => {
+  loadHomePage();
+  switchPages();
+})();
