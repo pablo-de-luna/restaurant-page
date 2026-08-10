@@ -1,3 +1,5 @@
+"use strict"
+
 import prosciutto from "../assets/images/prosciutto.png";
 import pepperoni from "../assets/images/pepperoni.png";
 import margherita from "../assets/images/margherita.png";
@@ -7,22 +9,22 @@ const content = document.querySelector("#content");
 const pizzas = [
   {
     image: prosciutto,
-    name:"Prosciutto & Arugula",
-    description:"Garlic olive oil base topped with melted mozzarella, crispy prosciutto, fresh arugula, and a drizzle of white truffle oil."
+    name: "Prosciutto & Arugula",
+    description: "Garlic olive oil base topped with melted mozzarella, crispy prosciutto, fresh arugula, and a drizzle of white truffle oil."
   },
   {
     image: pepperoni,
-    name:"Double Pepperoni Craze",
-    description:"Rich tomato sauce, mozzarella, loaded with crispy cupped pepperoni, finished with fresh basil and shredded parmesan."
+    name: "Double Pepperoni Craze",
+    description: "Rich tomato sauce, mozzarella, loaded with crispy cupped pepperoni, finished with fresh basil and shredded parmesan."
   },  
   {
     image: margherita,
-    name:"Fresh Basil Margherita",
-    description:"House tomato sauce, fresh mozzarella, sweet cherry tomatoes, aromatic basil leaves, and a sprinkle of aged parmesan."
+    name: "Fresh Basil Margherita",
+    description: "House tomato sauce, fresh mozzarella, sweet cherry tomatoes, aromatic basil leaves, and a sprinkle of aged parmesan."
   }
 ];
 
-export default function addMenuElements() {
+export default function generateMenuElements() {
   const menuTitle = document.createElement("div");
   menuTitle.id = "menu-title";
   menuTitle.textContent = "MENU";

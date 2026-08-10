@@ -1,11 +1,13 @@
+"use strict"
+
 import heroImg from "../assets/images/herobg.jpg";
 
-export default function AddHomeElements() {
-  const content = document.querySelector("#content");
+const content = document.querySelector("#content");
 
+export default function generateHomeElements() {
   // Hero section 
   const heroSection = document.createElement("section");  
-  heroSection.id = "hero-section";
+  heroSection.id = "home-hero-section";
 
     const heroLogo = document.createElement("div"); 
     heroLogo.textContent = "PIZZATOP"
@@ -16,60 +18,60 @@ export default function AddHomeElements() {
     const heroBg = document.createElement("img");
     heroBg.src = heroImg;
 
-  heroSection.appendChild(heroLogo);
-  heroSection.appendChild(heroMotto);
-  heroSection.appendChild(heroBg);
+    heroSection.appendChild(heroLogo);
+    heroSection.appendChild(heroMotto);
+    heroSection.appendChild(heroBg);
 
   // Info section
   const infoSection = document.createElement("section");
-  infoSection.id = "info-section";
+  infoSection.id = "home-info-section";
 
     // Hours
     const hours = document.createElement("div");
     hours.id = "home-hours-container";
 
-    const hoursTitle = document.createElement("h1");
-    hoursTitle.textContent = "HOURS";
+      const hoursTitle = document.createElement("h1");
+      hoursTitle.textContent = "HOURS";
 
-    const hoursText = document.createElement("p");
-    const hoursTextContent = `Mon-Wed: 11:00 AM - 10:00 PM<br>
-                              Thu-Fri: 11:00 AM - 12:AM<br>
-                              Sat: 8:00 AM - 4:00 PM`;
-    hoursText.innerHTML = hoursTextContent;
+      const hoursText = document.createElement("p");
+      const hoursTextContent = `Mon-Wed: 11:00 AM - 10:00 PM<br>
+                                Thu-Fri: 11:00 AM - 12:AM<br>
+                                Sat: 8:00 AM - 4:00 PM`;
+      hoursText.innerHTML = hoursTextContent;
 
-    hours.appendChild(hoursTitle);
-    hours.appendChild(hoursText);
+      hours.appendChild(hoursTitle);
+      hours.appendChild(hoursText);
     
     // Go to menu
     const goToMenu = document.createElement("div");
     goToMenu.id = "home-gotomenu-container";
 
-    const goToMenuText = document.createElement("div");
-    goToMenuText.textContent = "GO TO";
-    
-    const goToMenuButton = document.createElement("div");
-    goToMenuButton.textContent = "MENU";
+      const goToMenuText = document.createElement("div");
+      goToMenuText.textContent = "GO TO";
+      
+      const goToMenuButton = document.createElement("div");
+      goToMenuButton.textContent = "MENU";
 
-    goToMenu.appendChild(goToMenuText);
-    goToMenu.appendChild(goToMenuButton);
+      goToMenu.appendChild(goToMenuText);
+      goToMenu.appendChild(goToMenuButton);
 
     // Find Us
     const findUsInfo = document.createElement("div");
-    findUsInfo.id = "findus-container";
+    findUsInfo.id = "home-findus-container";
 
-    const findUsTitle = document.createElement("h1");
-    findUsTitle.textContent = "FIND US";
+      const findUsTitle = document.createElement("h1");
+      findUsTitle.textContent = "FIND US";
 
-    const findUsText = document.createElement("p");
-    findUsText.innerHTML = `123 Flavor St., Pizza Town, NY 10001<br>
-                            Phone: (555) 123-4567`;
+      const findUsText = document.createElement("p");
+      findUsText.innerHTML = `123 Flavor St., Pizza Town, NY 10001<br>
+                              Phone: (555) 123-4567`;
 
-    findUsInfo.appendChild(findUsTitle);
-    findUsInfo.appendChild(findUsText);
+      findUsInfo.appendChild(findUsTitle);
+      findUsInfo.appendChild(findUsText);
 
-  infoSection.appendChild(hours);
-  infoSection.appendChild(goToMenu);
-  infoSection.appendChild(findUsInfo);
+    infoSection.appendChild(hours);
+    infoSection.appendChild(goToMenu);
+    infoSection.appendChild(findUsInfo);
 
   content.appendChild(heroSection);
   content.appendChild(infoSection);

@@ -5,5 +5,6 @@
 import "./style.css";
 import loadHomePage from "./pages-modules/home.js";
 import loadMenuPage from "./pages-modules/menu.js";
+import loadAboutPage from "./pages-modules/about.js";
 
-loadMenuPage();
+loadAboutPage();
