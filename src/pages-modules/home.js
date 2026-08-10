@@ -1,6 +1,7 @@
 "use strict"
 
 import heroImg from "../assets/images/herobg.jpg";
+import loadMenuPage from "../pages-modules/menu.js"
 
 const content = document.querySelector("#content");
 
@@ -46,13 +47,9 @@ export default function generateHomeElements() {
     const goToMenu = document.createElement("div");
     goToMenu.id = "home-gotomenu-container";
 
-      const goToMenuText = document.createElement("div");
-      goToMenuText.textContent = "GO TO";
-      
-      const goToMenuButton = document.createElement("div");
-      goToMenuButton.textContent = "MENU";
+      const goToMenuButton = document.createElement("button");
+      goToMenuButton.textContent = "GO TO MENU";
 
-      goToMenu.appendChild(goToMenuText);
       goToMenu.appendChild(goToMenuButton);
 
     // Find Us
@@ -75,4 +72,15 @@ export default function generateHomeElements() {
 
   content.appendChild(heroSection);
   content.appendChild(infoSection);
+
+  handleGoToMenuButton();
 }
+
+function handleGoToMenuButton() {
+  const goToMenuButton = document.querySelector("#home-gotomenu-container > button");
+
+  goToMenuButton.addEventListener("click", () => {
+    content.replaceChildren();
+    loadMenuPage();
+  });
+};
