@@ -7,4 +7,26 @@ import loadHomePage from "./pages-modules/home.js";
 import loadMenuPage from "./pages-modules/menu.js";
 import loadAboutPage from "./pages-modules/about.js";
 
-loadAboutPage();
+const content = document.querySelector("#content");
+const navButtons = document.querySelectorAll(".nav-button");
+
+loadHomePage();
+
+function switchPages() {
+  navButtons.forEach(button => button.addEventListener("click", () => {
+    content.replaceChildren();
+
+    switch (button.id) {
+      case "home-button":
+        loadHomePage();
+        break;
+      case "menu-button":
+        loadMenuPage();
+        break;
+      case "about-button":
+        loadAboutPage();
+        break;
+    }
+  }));
+}
+switchPages();
