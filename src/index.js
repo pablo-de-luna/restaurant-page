@@ -29,7 +29,6 @@ const switchPages = () => {
 };
 
 const initialize = (() => {
-  loadMenuPage();
-  // loadHomePage();
+  loadHomePage();
   switchPages();
 })();
