@@ -6,20 +6,25 @@ import loadMenuPage from "../pages-modules/menu.js"
 const content = document.querySelector("#content");
 
 export default function generateHomeElements() {
-  // Hero section 
-  const heroSection = document.createElement("section");  
-  heroSection.id = "home-hero-section";
+  // Logo text
+  const logoSection = document.createElement("div");
+  logoSection.id = "home-logo-section"
 
     const heroLogo = document.createElement("div"); 
     heroLogo.textContent = "PIZZATOP"
+
+    logoSection.appendChild(heroLogo);
+
+  // Hero section 
+  const heroSection = document.createElement("section");  
+  heroSection.id = "home-hero-section";
     
     const heroMotto = document.createElement("div");
-    heroMotto.textContent = "THE BEST PIZZA IN THE WORLD!"
+    heroMotto.textContent = "The best pizza in the world!"
 
     const heroBg = document.createElement("img");
     heroBg.src = heroImg;
 
-    heroSection.appendChild(heroLogo);
     heroSection.appendChild(heroMotto);
     heroSection.appendChild(heroBg);
 
@@ -32,7 +37,7 @@ export default function generateHomeElements() {
     hours.id = "home-hours-container";
 
       const hoursTitle = document.createElement("h1");
-      hoursTitle.textContent = "HOURS";
+      hoursTitle.textContent = "Hours";
 
       const hoursText = document.createElement("p");
       const hoursTextContent = `Mon-Wed: 11:00 AM - 10:00 PM<br>
@@ -57,7 +62,7 @@ export default function generateHomeElements() {
     findUsInfo.id = "home-findus-container";
 
       const findUsTitle = document.createElement("h1");
-      findUsTitle.textContent = "FIND US";
+      findUsTitle.textContent = "Find us";
 
       const findUsText = document.createElement("p");
       findUsText.innerHTML = `123 Flavor St., Pizza Town, NY 10001<br>
@@ -70,6 +75,7 @@ export default function generateHomeElements() {
     infoSection.appendChild(goToMenu);
     infoSection.appendChild(findUsInfo);
 
+  content.appendChild(logoSection);
   content.appendChild(heroSection);
   content.appendChild(infoSection);
 
