@@ -189,7 +189,44 @@ nav {
   transform: translateY(-2px);
 }
 
-#about-title {
+/* #content *,
+#content {
+  border: 1px dotted black;
+} */
+
+#menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.pizza-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: auto;
+}
+
+.pizza-container:nth-child(2n + 1) .pizza-text {
+  text-align: right;
+}
+
+.pizza-container img {
+  height: 200px;
+  width: 200px;
+}
+
+.pizza-text {
+  max-width: 340px;
+}
+
+.pizza-text h1 {
+  font-family: var(--primary-font);
+  font-size: 1.5rem;
+}
+
+#about-title,
+#menu-title {
   color: var(--secondary-color);
   font-family: var(--primary-font);
   font-size: 3rem;
