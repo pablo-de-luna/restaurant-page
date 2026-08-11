@@ -29,13 +29,18 @@ export default function generateAboutElements() {
       infoContainer.appendChild(contactButton);
 
       // Image
-    const image = document.createElement("img");
-    image.src = aboutImage;
-    image.setAttribute("height", "600");
-    image.setAttribute("width", "400");
+    const imageContainer = document.createElement("div");
+    imageContainer.id = "about-image-container";
+    
+      const image = document.createElement("img");
+      image.src = aboutImage;
+      image.setAttribute("height", "600");
+      image.setAttribute("width", "400");
+
+      imageContainer.appendChild(image);
 
     aboutContainer.appendChild(infoContainer);
-    aboutContainer.appendChild(image);
+    aboutContainer.appendChild(imageContainer);
     
   content.appendChild(title);
   content.appendChild(aboutContainer);
