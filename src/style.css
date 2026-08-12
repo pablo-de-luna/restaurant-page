@@ -140,8 +140,8 @@ nav {
   z-index: -1;
   bottom: -150px;
   left: 0;
-  max-width: calc(2160px * 0.5);
-  max-height: calc(1440px * 0.5);
+  max-width: 1080px;
+  max-height: 720px;
 }
 
 #home-info-section {
