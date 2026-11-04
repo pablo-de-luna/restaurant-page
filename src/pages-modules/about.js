@@ -1,5 +1,3 @@
-"use strict"
-
 import aboutImage from "../assets/images/about-image.jpg";
 
 const content = document.querySelector("#content");

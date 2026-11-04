@@ -1,5 +1,3 @@
-"use strict"
-
 import heroImg from "../assets/images/herobg.jpg";
 import loadMenuPage from "../pages-modules/menu.js"
 

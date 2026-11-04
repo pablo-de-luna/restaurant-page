@@ -1,5 +1,3 @@
-"use strict"
-
 import prosciutto from "../assets/images/prosciutto.png";
 import pepperoni from "../assets/images/pepperoni.png";
 import margherita from "../assets/images/margherita.png";
