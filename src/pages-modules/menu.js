@@ -8,18 +8,21 @@ const pizzas = [
   {
     image: prosciutto,
     name: "Prosciutto & Arugula",
-    description: "Garlic olive oil base topped with melted mozzarella, crispy prosciutto, fresh arugula, and a drizzle of white truffle oil."
+    description:
+      "Garlic olive oil base topped with melted mozzarella, crispy prosciutto, fresh arugula, and a drizzle of white truffle oil.",
   },
   {
     image: pepperoni,
     name: "Double Pepperoni Craze",
-    description: "Rich tomato sauce, mozzarella, loaded with crispy cupped pepperoni, finished with fresh basil and shredded parmesan."
-  },  
+    description:
+      "Rich tomato sauce, mozzarella, loaded with crispy cupped pepperoni, finished with fresh basil and shredded parmesan.",
+  },
   {
     image: margherita,
     name: "Fresh Basil Margherita",
-    description: "House tomato sauce, fresh mozzarella, sweet cherry tomatoes, aromatic basil leaves, and a sprinkle of aged parmesan."
-  }
+    description:
+      "House tomato sauce, fresh mozzarella, sweet cherry tomatoes, aromatic basil leaves, and a sprinkle of aged parmesan.",
+  },
 ];
 
 export default function generateMenuElements() {

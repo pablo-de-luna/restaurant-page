@@ -4,47 +4,47 @@ const content = document.querySelector("#content");
 
 export default function generateAboutElements() {
   const title = document.createElement("div");
-  title.id = "about-title"
+  title.id = "about-title";
   title.textContent = "About us";
 
   const aboutContainer = document.createElement("div");
   aboutContainer.id = "about-container";
 
-    // Info
-    const infoContainer = document.createElement("div");
+  // Info
+  const infoContainer = document.createElement("div");
 
-      const infoTitle = document.createElement("h1");
-      infoTitle.textContent = "Our story";
+  const infoTitle = document.createElement("h1");
+  infoTitle.textContent = "Our story";
 
-      const infoStory = document.createElement("p");
-      infoStory.innerHTML = story;
+  const infoStory = document.createElement("p");
+  infoStory.innerHTML = story;
 
-      const contactButton = document.createElement("button");
-      contactButton.textContent = "Contact us!"
+  const contactButton = document.createElement("button");
+  contactButton.textContent = "Contact us!";
 
-      infoContainer.appendChild(infoTitle);
-      infoContainer.appendChild(infoStory);
-      infoContainer.appendChild(contactButton);
+  infoContainer.appendChild(infoTitle);
+  infoContainer.appendChild(infoStory);
+  infoContainer.appendChild(contactButton);
 
-      // Image
-    const imageContainer = document.createElement("div");
-    imageContainer.id = "about-image-container";
-    
-      const image = document.createElement("img");
-      image.src = aboutImage;
-      image.setAttribute("height", "600");
-      image.setAttribute("width", "400");
+  // Image
+  const imageContainer = document.createElement("div");
+  imageContainer.id = "about-image-container";
 
-      imageContainer.appendChild(image);
+  const image = document.createElement("img");
+  image.src = aboutImage;
+  image.setAttribute("height", "600");
+  image.setAttribute("width", "400");
 
-    aboutContainer.appendChild(infoContainer);
-    aboutContainer.appendChild(imageContainer);
-    
+  imageContainer.appendChild(image);
+
+  aboutContainer.appendChild(infoContainer);
+  aboutContainer.appendChild(imageContainer);
+
   content.appendChild(title);
   content.appendChild(aboutContainer);
 }
 
-  const story = `PIZZATOP started the way good neighborhood restaurants usually
+const story = `PIZZATOP started the way good neighborhood restaurants usually
   do: with a family that loved feeding people and a big idea that a perfect pizza
   could bring everyone together. Our grandparents first opened the doors with a 
   simple recipe, a wood-fired oven, and a lot of heart, and over time that same 

@@ -1,77 +1,77 @@
 import heroImg from "../assets/images/herobg.jpg";
-import loadMenuPage from "../pages-modules/menu.js"
+import loadMenuPage from "../pages-modules/menu.js";
 
 const content = document.querySelector("#content");
 
 export default function generateHomeElements() {
   // Logo text
   const logoSection = document.createElement("div");
-  logoSection.id = "home-logo-section"
+  logoSection.id = "home-logo-section";
 
-    const heroLogo = document.createElement("div"); 
-    heroLogo.textContent = "PIZZATOP"
+  const heroLogo = document.createElement("div");
+  heroLogo.textContent = "PIZZATOP";
 
-    logoSection.appendChild(heroLogo);
+  logoSection.appendChild(heroLogo);
 
-  // Hero section 
-  const heroSection = document.createElement("section");  
+  // Hero section
+  const heroSection = document.createElement("section");
   heroSection.id = "home-hero-section";
-    
-    const heroMotto = document.createElement("div");
-    heroMotto.textContent = "The best pizza in the world!"
 
-    const heroBg = document.createElement("img");
-    heroBg.src = heroImg;
+  const heroMotto = document.createElement("div");
+  heroMotto.textContent = "The best pizza in the world!";
 
-    heroSection.appendChild(heroMotto);
-    heroSection.appendChild(heroBg);
+  const heroBg = document.createElement("img");
+  heroBg.src = heroImg;
+
+  heroSection.appendChild(heroMotto);
+  heroSection.appendChild(heroBg);
 
   // Info section
   const infoSection = document.createElement("section");
   infoSection.id = "home-info-section";
 
-    // Hours
-    const hours = document.createElement("div");
-    hours.id = "home-hours-container";
+  // Hours
+  const hours = document.createElement("div");
+  hours.id = "home-hours-container";
 
-      const hoursTitle = document.createElement("h1");
-      hoursTitle.textContent = "Hours";
+  const hoursTitle = document.createElement("h1");
+  hoursTitle.textContent = "Hours";
 
-      const hoursText = document.createElement("p");
-      const hoursTextContent = `Mon-Wed: 11:00 AM - 10:00 PM<br>
+  const hoursText = document.createElement("p");
+  const hoursTextContent = `Mon-Wed: 11:00 AM - 10:00 PM<br>
                                 Thu-Fri: 11:00 AM - 12:AM<br>
                                 Sat: 8:00 AM - 4:00 PM`;
-      hoursText.innerHTML = hoursTextContent;
+  hoursText.innerHTML = hoursTextContent;
 
-      hours.appendChild(hoursTitle);
-      hours.appendChild(hoursText);
-    
-    // Go to menu
-    const goToMenu = document.createElement("div");
-    goToMenu.id = "home-gotomenu-container";
+  hours.appendChild(hoursTitle);
+  hours.appendChild(hoursText);
 
-      const goToMenuButton = document.createElement("button");
-      goToMenuButton.textContent = "GO TO MENU";
+  // Go to menu
+  const goToMenu = document.createElement("div");
+  goToMenu.id = "home-gotomenu-container";
 
-      goToMenu.appendChild(goToMenuButton);
+  const goToMenuButton = document.createElement("button");
+  goToMenuButton.textContent = "GO TO MENU";
 
-    // Find Us
-    const findUsInfo = document.createElement("div");
-    findUsInfo.id = "home-findus-container";
+  goToMenu.appendChild(goToMenuButton);
 
-      const findUsTitle = document.createElement("h1");
-      findUsTitle.textContent = "Find us";
+  // Find Us
+  const findUsInfo = document.createElement("div");
+  findUsInfo.id = "home-findus-container";
 
-      const findUsText = document.createElement("p");
-      findUsText.innerHTML = `123 Flavor St., Pizza Town, NY 10001<br>
+  const findUsTitle = document.createElement("h1");
+  findUsTitle.textContent = "Find us";
+
+  const findUsText = document.createElement("p");
+  findUsText.innerHTML = `123 Flavor St., Pizza Town, NY 10001<br>
                               Phone: (555) 123-4567`;
 
-      findUsInfo.appendChild(findUsTitle);
-      findUsInfo.appendChild(findUsText);
+  findUsInfo.appendChild(findUsTitle);
+  findUsInfo.appendChild(findUsText);
 
-    infoSection.appendChild(hours);
-    infoSection.appendChild(goToMenu);
-    infoSection.appendChild(findUsInfo);
+  infoSection.appendChild(hours);
+  infoSection.appendChild(goToMenu);
+  infoSection.appendChild(findUsInfo);
 
   content.appendChild(logoSection);
   content.appendChild(heroSection);
@@ -81,10 +81,12 @@ export default function generateHomeElements() {
 }
 
 function handleGoToMenuButton() {
-  const goToMenuButton = document.querySelector("#home-gotomenu-container > button");
+  const goToMenuButton = document.querySelector(
+    "#home-gotomenu-container > button",
+  );
 
   goToMenuButton.addEventListener("click", () => {
     content.replaceChildren();
     loadMenuPage();
   });
-};
+}
